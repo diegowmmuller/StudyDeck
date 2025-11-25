@@ -1,11 +1,12 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
-import { Login } from './pages/login/Login';
-import { Home } from './pages/home/Home';
-import Register from './pages/register/Register';
+import { Login } from "./pages/login/Login";
+import { Home } from "./pages/home/Home";
+import Register from "./pages/register/Register";
+import About from "./pages/about/About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/about" element={<About />} />
 
             <Route
               path="/home"
