@@ -20,7 +20,7 @@ export const Login = () => {
       });
 
       login(res.data.token); // salva o token
-      navigate('/dashboard'); // vai para rota protegida
+      navigate('/home'); // vai para rota protegida
     } catch (err) {
       alert('Credenciais inválidas');
     }
