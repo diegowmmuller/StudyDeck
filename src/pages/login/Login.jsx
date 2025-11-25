@@ -23,7 +23,7 @@ export const Login = () => {
         password,
       });
 
-      login(res.data.token); // salva o token
+      login(res.data); // salva o token
       navigate('/home'); // vai para rota protegida
     } catch (err) {
       console.error(err);
