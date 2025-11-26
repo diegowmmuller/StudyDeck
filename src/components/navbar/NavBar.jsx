@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import styles from './NavBar.module.css';
+import logo from '../assets/logo.png';
 
 export const NavBar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -10,7 +11,7 @@ export const NavBar = () => {
       <div className={styles.navContainer}>
         <div className={styles.logoSection}>
           <div className={styles.logoContainer}>
-            <span className={styles.logoText}>Logo</span>
+            <img src={logo} alt="Logo" className={styles.logoImage} />
           </div>
           <span className={styles.brandName}>StudyDeck</span>
         </div>
