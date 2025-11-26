@@ -1,0 +1,58 @@
+.card {
+  border-radius: 10px;
+  padding: 12px;
+  min-height: 100px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+  color: #111;
+}
+
+.content {
+  cursor: pointer;
+}
+
+.title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+
+.desc {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.smallBtn {
+  border: none;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.smallBtn:hover {
+  opacity: 0.95;
+}
+
+.smallBtnDanger {
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #c0392b;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
