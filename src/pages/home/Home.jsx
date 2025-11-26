@@ -8,7 +8,7 @@ import styles from './Home.module.css';
 
 export const Home = () => {
   const getId = (card) => card.id ?? card._id;
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   const [userArray, setuserArray] = useState([]);
 
   const userId = user?.id;
@@ -78,6 +78,18 @@ export const Home = () => {
 
   return (
     <div className={styles.container}>
+      <nav style={{
+        background: "#2d9cdb",
+        padding: "10px",
+        display: "flex",
+        justifyContent: "space-between"
+      }}>
+        <span>Logo</span>
+        <button className={styles.btn} onClick={logout}>
+          Logout
+        </button>
+      </nav>
+
       <header className={styles.header}>
         <h1>Meus Cards</h1>
         <div className={styles.actions}>
