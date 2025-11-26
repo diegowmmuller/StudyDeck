@@ -1,7 +1,13 @@
-/* ===== HOME PAGE ===== */
-.homePage {
+/* ===== DECK PAGE ===== */
+.deckPage {
   min-height: 100vh;
   background: linear-gradient(135deg, var(--primary-blue-50) 0%, #e0e7ff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -129,127 +135,99 @@
   font-weight: 500;
 }
 
-/* ===== FEATURES SECTION ===== */
-.featuresSection {
+/* ===== CARDS SECTION ===== */
+.cardsSection {
   padding: 5rem 2rem;
   background: var(--gray-50);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  text-align: center;
   color: var(--gray-900);
   margin-bottom: 1rem;
 }
 
 .sectionSubtitle {
   font-size: 1.125rem;
-  text-align: center;
   color: var(--gray-600);
-  margin-bottom: 3rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.featuresGrid {
+/* ===== GRID DE CARDS ===== */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-.featureCard {
+/* ===== ESTADOS ===== */
+.loadingContainer,
+.errorContainer,
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
   background: var(--white);
-  padding: 2rem;
   border-radius: var(--radius-2xl);
-  text-align: center;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-  border: 1px solid var(--gray-200);
+  margin-top: 2rem;
 }
 
-.featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-blue-200);
+.loadingContainer,
+.errorContainer {
+  flex-direction: column;
 }
 
-.featureIcon {
-  font-size: 3rem;
+.emptyContainer {
+  background: transparent;
+  box-shadow: none;
+}
+
+.emptyContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.emptyIcon {
+  font-size: 4rem;
   margin-bottom: 1.5rem;
 }
 
-.featureTitle {
-  font-size: 1.25rem;
+.emptyTitle {
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: 1rem;
 }
 
-.featureDescription {
+.emptyText {
+  font-size: 1.125rem;
   color: var(--gray-600);
+  margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-/* ===== CTA SECTION ===== */
-.ctaSection {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, var(--success-green) 0%, var(--success-green-dark) 100%);
-  color: var(--white);
-  text-align: center;
-}
-
-.ctaContainer {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.ctaTitle {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.ctaText {
+.info {
   font-size: 1.125rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.ctaButton {
-  padding: 1rem 2.5rem;
-  background: var(--white);
-  color: var(--success-green-dark);
-  border: none;
-  border-radius: var(--radius-xl);
-  font-weight: 600;
-  font-size: 1.125rem;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: var(--gray-900);
-  color: var(--white); /* Mudei de gray-400 para white */
-  padding: 2rem;
+  color: var(--gray-600);
   text-align: center;
+  margin: 0;
 }
 
-.footerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
+.error {
+  font-size: 1.125rem;
+  color: var(--error-red);
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -282,7 +260,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .featuresGrid {
+  .grid {
     grid-template-columns: 1fr;
   }
 }
@@ -302,5 +280,9 @@
   
   .primaryButton, .secondaryButton {
     width: 100%;
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
 }

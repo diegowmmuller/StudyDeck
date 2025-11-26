@@ -8,10 +8,12 @@
   justify-content: space-between;
   cursor: default;
   color: #111;
+  overflow: hidden; /* ← ADICIONE ESTA LINHA */
 }
 
 .content {
   cursor: pointer;
+  overflow: hidden; /* ← ADICIONE ESTA LINHA */
 }
 
 .title {
@@ -23,8 +25,11 @@
   margin: 0;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.7);
+  word-wrap: break-word; /* ← ADICIONE ESTA LINHA */
+  overflow: hidden;
 }
 
+/* Resto do CSS permanece igual... */
 .actions {
   display: flex;
   gap: 8px;
