@@ -34,7 +34,13 @@ export const NavBar = () => {
               Olá, {user.name || user.email}
             </span>
           )}
-          <button className={styles.logoutBtn} onClick={logout}>
+          <button
+            className={styles.logoutBtn}
+            onClick={() => {
+              logout();            
+              window.location.href = '/login'; 
+            }}
+          >
             Logout
           </button>
         </div>

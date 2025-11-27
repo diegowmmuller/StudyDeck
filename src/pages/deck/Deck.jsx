@@ -105,9 +105,9 @@ export const Deck = () => {
               <button className={styles.primaryButton} onClick={openCreate}>
                 Criar Novo Card
               </button>
-              <button className={styles.secondaryButton} onClick={fetchCards}>
-                Atualizar Deck
-              </button>
+              {/* <button className={styles.secondaryButton} onClick={fetchCards}>
+                Atualizar Deck**
+              </button> */}
             </div>
           </div>
           <div className={styles.heroImage}>
