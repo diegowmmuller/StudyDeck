@@ -57,7 +57,7 @@ export const Home = () => {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              Study is <span className={styles.highlight}>Easy</span>
+              Studying is <span className={styles.highlight}>Easy</span>
             </h1>
             <p className={styles.heroSubtitle}>
               Transforme sua maneira de estudar com nossa plataforma intuitiva 
@@ -101,7 +101,7 @@ export const Home = () => {
       {/* Features Section */}
       <section className={styles.featuresSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Por que escolher o Study is Easy?</h2>
+          <h2 className={styles.sectionTitle}>Por que escolher o Study Deck?</h2>
           <p className={styles.sectionSubtitle}>
             Uma plataforma desenvolvida para tornar seus estudos mais eficientes e organizados
           </p>
