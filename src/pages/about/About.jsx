@@ -34,7 +34,7 @@ export default function About() {
     {
       icon: "👥",
       title: "Equipe",
-      description: "Desenvolvido por estudantes de Engenharia de Software da UNISUL."
+      description: "Desenvolvido por estudantes de Ciência da Computação da UNISUL."
     },
     {
       icon: "💡",
