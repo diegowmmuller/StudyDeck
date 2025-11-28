@@ -1,63 +1,88 @@
 .card {
-  border-radius: 10px;
-  padding: 12px;
-  min-height: 100px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  position: relative;
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 130px;
+
+  /* FUNDO BRANCO → muito mais elegante */
+  background: #fff;
+
+  /* borda com cor do card */
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-left-width: 8px;
+  border-left-style: solid;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: default;
+
   color: #111;
-  overflow: hidden; /* ← ADICIONE ESTA LINHA */
+  overflow: hidden;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* Ribbon colorido */
+.ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  opacity: 0.9;
+}
+
+/* Hover mais fino */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Conteúdo */
 .content {
+  padding-left: 10px;
   cursor: pointer;
-  overflow: hidden; /* ← ADICIONE ESTA LINHA */
 }
 
 .title {
   margin: 0 0 6px 0;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .desc {
   margin: 0;
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.7);
-  word-wrap: break-word; /* ← ADICIONE ESTA LINHA */
-  overflow: hidden;
+  font-size: 14px;
+  color: #555;
 }
 
-/* Resto do CSS permanece igual... */
+/* Botões */
 .actions {
   display: flex;
   gap: 8px;
-  margin-top: 10px;
   justify-content: flex-end;
+  margin-top: 12px;
 }
 
-.smallBtn {
+.smallBtn,
+.smallBtnDanger {
   border: none;
-  background: #fff;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  background: #f3f3f3;
+  transition: 0.15s ease;
 }
 
-.smallBtn:hover {
-  opacity: 0.95;
+.smallBtn:hover,
+.smallBtnDanger:hover {
+  background: #e7e7e7;
+  transform: scale(1.03);
 }
 
 .smallBtnDanger {
-  border: none;
-  background: rgba(255, 255, 255, 0.85);
   color: #c0392b;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 700;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }

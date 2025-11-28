@@ -2,13 +2,6 @@ import api from '../../api/api';
 import React from 'react';
 import styles from './CardItem.module.css';
 
-/*
-  Props:
-    card: object
-    onEdit: fn
-    onDelete: fn
-    onRefresh: fn (opcional)
-*/
 export default function CardItem({ card, onEdit, onDelete }) {
   const getId = (card) => card.id ?? card._id;
 
@@ -20,7 +13,21 @@ export default function CardItem({ card, onEdit, onDelete }) {
   }
 
   return (
-    <div className={styles.card} style={{ background: card.color || '#fff' }} role="article">
+    <div
+      className={styles.card}
+      style={{
+        borderLeftColor: card.color || '#4a90e2',
+      }}
+      role="article"
+    >
+      {/* Ribbon lateral */}
+      <div
+        className={styles.ribbon}
+        style={{
+          backgroundColor: card.color || '#4a90e2',
+        }}
+      ></div>
+
       <div className={styles.content} onClick={showDetails}>
         <h3 className={styles.title}>{card.name}</h3>
         <p className={styles.desc}>{card.description}</p>
